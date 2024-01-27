@@ -23,7 +23,6 @@ jobs:
         echo "test" >> README.md
         git add .
         git commit -m "Test"
-        git push origin test
 
     - name: Commit and push changes
       uses: devops-infra/action-commit-push@master
