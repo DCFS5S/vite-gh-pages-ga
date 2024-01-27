@@ -24,3 +24,10 @@ jobs:
         git add .
         git commit -m "Test"
         git push origin test
+
+    - name: Commit and push changes
+      uses: devops-infra/action-commit-push@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        commit_prefix: "[AUTO-COMMIT] foo/bar replace"
+        target_branch: "test"
